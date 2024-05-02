@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 app.get("/randomCheck", (req, res) => {
   function randomCheck() {
-    return Math.floor(Math.random() * 5);
+    return Math.floor(Math.random() * 6);
   }
   res.json({ number: randomCheck() });
 });
