@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Node.js Cron Job Example</title>
+  </head>
+  <body>
+    <h1>Node.js Cron Job Example</h1>
+    <button id="randomCheck">Check Random Number</button>
+    <p id="randomNumber"></p>
+
+    <script>
+      const button = document.getElementById("randomCheck"); const randomNumber
+      = document.getElementById("randomNumber");
+      button.addEventListener("click", () => { fetch("/randomCheck")
+      .then((response) => response.json()) .then((data) => {
+      randomNumber.innerText = data.number; }); });
+    </script>
+  </body>
+</html>
