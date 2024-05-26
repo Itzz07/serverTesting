@@ -9,11 +9,16 @@
     <p id="randomNumber"></p>
 
     <script>
-      const button = document.getElementById("randomCheck"); const randomNumber
-      = document.getElementById("randomNumber");
-      button.addEventListener("click", () => { fetch("/randomCheck")
-      .then((response) => response.json()) .then((data) => {
-      randomNumber.innerText = data.number; }); });
+      const button = document.getElementById("randomCheck"); 
+      const randomNumber = document.getElementById("randomNumber");
+      button.addEventListener("click", () => { 
+        fetch("/randomCheck")
+        .then((response) => response.json()) 
+        .then((data) => {
+          randomNumber.innerText = data.number; 
+        }); 
+      });
     </script>
+    
   </body>
 </html>

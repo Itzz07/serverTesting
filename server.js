@@ -25,7 +25,7 @@ app.get("/randomCheck", (req, res) => {
   res.json({ number: randomCheck() });
 });
 
-cron.schedule("* * * * *", () => {
+cron.schedule('*/30 * * * * *', () => {
   console.log("Running Cron Job");
   // your cron job code
   // randomCheck();
